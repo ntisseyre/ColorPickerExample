@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorPickerExample", "ColorPickerExample\ColorPickerExample.csproj", "{ABEDCD5F-1A60-4298-9A46-883F5A0FC74A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABEDCD5F-1A60-4298-9A46-883F5A0FC74A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABEDCD5F-1A60-4298-9A46-883F5A0FC74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABEDCD5F-1A60-4298-9A46-883F5A0FC74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABEDCD5F-1A60-4298-9A46-883F5A0FC74A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
