@@ -3,12 +3,47 @@
     <head>
         <title>Color Picker Example</title>
         <link href="@Url.Content("~/Content/css/colorPicker.css")" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="@Url.Content("~/Content/js/colorPicker.js")"></script>
+        <style>
+            div.colorPickerDemo{display:table;margin-top:100px;margin-left:40%}
+            div.colorPickerDemo > div { display:inline;vertical-align:middle;}
+            div.colorPickerDemo > div:first-of-type {color:#121212}
+            div.colorPickerDemo > div.colorDemo
+            {
+                display:inline-block;
+                border:1px solid #222222;
+                outline:none;
+                cursor:pointer;
+                margin-left:10px;
+                width:24px;height:24px
+            }
+
+        </style>
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="@Url.Content("~/Content/js/colorPicker.js")"></script>
+        <script>
+            //================== Demo scripts ==================
+            $(document).ready(function ()
+            {
+                //bind to colorPicker's change event
+                $(document).bind("colorSelected", function (event, data) { onColorSelected(data); }); 
+
+                //bind colorPicker to the div
+                initColorPicker($("div.colorDemo"));
+            });
+
+            function onColorSelected(eventArgs)
+            {
+                var classNames = eventArgs.selectedForControl.attr('class');
+                alert("Object classes: " + classNames + "\r\nSelected color: " + eventArgs.value);
+            }
+
+        </script>
     </head>
     <body>
-        <div>
-
+        <div class="colorPickerDemo">
+            <div>Please, select a color:</div>
+            <div class="colorDemo slonic-calendar-colors-brownRed">&nbsp;</div>
         </div>
+        @Html.Partial("ColorsGrid")
     </body>
 </html>

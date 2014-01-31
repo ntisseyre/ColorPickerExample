@@ -27,7 +27,7 @@ $(document).ready(function ()
 function initColorPicker(control) {
     if (control.data('isInited'))
         return;
-
+    
     control.data('isInited', true);
 
     //adding tabIndex attribute to support keydown event
